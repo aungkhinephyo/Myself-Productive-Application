@@ -1,0 +1,111 @@
+/* ----------- start preview img ------------------ */
+.preview-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    padding: 3px;
+    border: 2px solid royalblue;
+    border-radius: 5px;
+    margin: 10px;
+}
+/* ----------- end preview img ------------------ */
+
+/* ======================Start Sweetalert ==================== */
+.swal2-title {
+    font-size: 20px !important;
+}
+.swal2-content {
+    font-size: 16px !important;
+}
+/* ======================End Sweetalert ==================== */
+
+/* ======================Start toastr ==================== */
+#toast-container > div {
+    opacity: 1 !important;
+}
+/* ======================End toastr ==================== */
+
+/* ------------------------------- Start Datatable --------------------------- */
+.color-circle {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.action-icons {
+    display: inline-block;
+}
+.action-icons a {
+    text-decoration: none;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 3px;
+    margin: 5px 7px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+}
+.action-icons a:hover {
+    opacity: 0.8;
+}
+
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+    vertical-align: middle;
+    border: 1px solid #cccccd;
+    border-collapse: collapse;
+}
+table.dataTable td {
+    font-size: 15px;
+}
+
+div.dataTables_processing > div {
+    display: none;
+}
+
+.mark,
+mark {
+    background: lightgreen !important;
+}
+
+@media screen and (max-width: 767px) {
+    div.dataTables_wrapper div.dataTables_length {
+        text-align: left !important;
+    }
+    div.dataTables_wrapper div.dataTables_filter {
+        text-align: left !important;
+        margin-top: 15px;
+    }
+    div.dataTables_wrapper div.dataTables_filter label {
+        display: block;
+        width: 100%;
+    }
+    div.dataTables_wrapper div.dataTables_filter input {
+        width: 50% !important;
+    }
+    table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin-top: 0 !important;
+    }
+    table.dataTable > tbody > tr.child ul.dtr-details > li {
+        text-align: left !important;
+    }
+
+    table.dataTable > tbody > tr.child ul.dtr-details > li .dtr-title,
+    table.dataTable > tbody > tr.child ul.dtr-details > li .dtr-data {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    div.dataTables_wrapper div.dataTables_filter input {
+        width: 70% !important;
+    }
+}
+/* ------------------------------- End Datatable --------------------------- */

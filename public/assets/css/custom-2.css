@@ -1,0 +1,366 @@
+/* ------------------------------- Start User UI ---------------------------------- */
+.strike-none {
+    text-decoration: none;
+}
+.bg-green {
+    background-color: green !important;
+}
+
+/* search box */
+.search-bar {
+    min-width: 360px;
+    /* padding: 0 20px; */
+}
+
+.search-form {
+    width: 100%;
+}
+
+.search-form input {
+    border: 0;
+    font-size: 14px;
+    color: #012970;
+    border: 1px solid rgba(1, 41, 112, 0.2);
+    padding: 7px 38px 7px 8px;
+    border-radius: 3px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.search-form input:focus,
+.search-form input:hover {
+    outline: none;
+    box-shadow: 0 0 10px 0 rgba(1, 41, 112, 0.15);
+    border: 1px solid rgba(1, 41, 112, 0.3);
+}
+
+.search-form button {
+    border: 0;
+    padding: 0;
+    margin-left: -30px;
+    background: none;
+}
+
+.search-form button i {
+    color: #012970;
+}
+
+/* note */
+.create-note {
+    height: 250px;
+    cursor: pointer;
+    color: #000;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+.note {
+    height: 220px;
+    cursor: pointer;
+    color: #000;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.7s linear;
+}
+.note:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+.note .action-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s 0.2s linear;
+}
+.note:hover .action-container {
+    opacity: 1;
+    visibility: visible;
+}
+.note .action-container a {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+/* journal read */
+.title-cross {
+    position: relative;
+}
+.title-cross span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    min-width: 150px;
+    background-color: white;
+    z-index: 3;
+}
+.title-cross::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+    background: #808080;
+    z-index: 1;
+}
+
+/* borderless input */
+.borderless-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+.borderless-input:focus,
+.borderless-input:hover {
+    border: none;
+    outline: none;
+}
+.title-input {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* utility classes */
+.preservelines {
+    white-space: pre-wrap;
+}
+.resize-none {
+    resize: none;
+}
+.save-link {
+    color: #20b2aa;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+.save-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #20b2aa;
+}
+.go-to-link {
+    color: #000;
+}
+.go-to-link:hover {
+    color: #4154f1;
+    border-bottom: 1px solid #4154f1;
+    font-weight: 500;
+}
+
+/* preview img */
+.preview-img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    padding: 3px;
+    border: 2px solid #4169e1;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* pdf thumbnails */
+.pdf-thumbnail {
+    width: 55px;
+    height: 67px;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    padding: 3px;
+    margin: 10px;
+    border: 2px solid #4169e1;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* task-item */
+.task-item {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.task-item-actions a {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* custom badge */
+.square-badge {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* todolist */
+.todolist {
+    margin-top: 5px;
+    position: relative;
+    overflow: visible;
+}
+
+.todolist .todolist-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 3px;
+    background: #e0ebff;
+}
+
+.todolist .todolist-info span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todolist .todolist-info span:hover {
+    border: 1px solid #36d344;
+}
+
+.todolist .todolist-info strike {
+    color: #5b7a9d;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.todolist .dropstart {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.todolist .dropdown-toggle {
+    color: #000;
+    text-decoration: none;
+}
+
+.todolist .dropdown-toggle::before {
+    display: none;
+}
+/* ------------------------------- End User UI ---------------------------------- */
+
+/* ======================Start Sweetalert ==================== */
+.swal2-title {
+    font-size: 20px !important;
+}
+.swal2-content {
+    font-size: 16px !important;
+}
+/* ======================End Sweetalert ==================== */
+
+/* ======================Start toastr ==================== */
+#toast-container > div {
+    opacity: 1 !important;
+}
+/* ======================End toastr ==================== */
+
+/* ------------------------------- Start Datatable --------------------------- */
+.action-icons {
+    display: inline-block;
+}
+.action-icons a {
+    text-decoration: none;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 3px;
+    margin: 5px 7px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+.action-icons a:hover {
+    opacity: 0.8;
+}
+
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+table.dataTable td {
+    font-size: 15px;
+}
+
+div.dataTables_processing > div {
+    display: none;
+}
+
+.mark,
+mark {
+    background: lightgreen !important;
+}
+
+@media screen and (max-width: 767px) {
+    div.dataTables_wrapper div.dataTables_length {
+        text-align: left !important;
+    }
+    div.dataTables_wrapper div.dataTables_filter {
+        text-align: left !important;
+        margin-top: 15px;
+    }
+    div.dataTables_wrapper div.dataTables_filter label {
+        display: block;
+        width: 100%;
+    }
+    div.dataTables_wrapper div.dataTables_filter input {
+        width: 50% !important;
+    }
+    table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin-top: 0 !important;
+    }
+    table.dataTable > tbody > tr.child ul.dtr-details > li {
+        text-align: left !important;
+    }
+
+    table.dataTable > tbody > tr.child ul.dtr-details > li .dtr-title,
+    table.dataTable > tbody > tr.child ul.dtr-details > li .dtr-data {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    div.dataTables_wrapper div.dataTables_filter input {
+        width: 70% !important;
+    }
+}
+/* ------------------------------- End Datatable --------------------------- */
