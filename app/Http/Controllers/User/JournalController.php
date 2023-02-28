@@ -108,7 +108,6 @@ class JournalController extends Controller
         $request->validate([
             'title' => 'required|string',
             'date' => "required|unique:journals,date,{$id},id,user_id," . auth()->id(),
-            // 'date' => 'required|unique:journals,date,' . $id,
             'rating' => 'required'
         ]);
 

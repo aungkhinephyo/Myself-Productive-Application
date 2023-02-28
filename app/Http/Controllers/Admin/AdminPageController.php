@@ -43,7 +43,7 @@ class AdminPageController extends Controller
         $jobs = [];
         $jobChartCount = [];
         foreach ($pieChartData as $job => $values) {
-            $jobs[] = $job;
+            $jobs[] = $job ? $job : 'Unknown';
             $jobChartCount[] = count($values);
         }
 

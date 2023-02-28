@@ -45,9 +45,9 @@
                     </li>
 
                     <li>
-                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">
-                            <i class="bi bi-gear"></i>
-                            <span>Account Settings</span>
+                        <a href="{{ route('user.change_password') }}" class="dropdown-item d-flex align-items-center">
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Change Password</span>
                         </a>
                     </li>
                     <li>

@@ -177,11 +177,11 @@
                         @forelse ($events as $event)
                             <div class="d-flex align-items-center mt-3">
                                 <div
-                                    class="card-icon2 bg-info-light text-info rounded-circle d-flex align-items-center justify-content-center">
+                                    class="card-icon2 bg-info-light text-primary rounded-3 d-flex align-items-center justify-content-center">
                                     <i class="bi bi-gem"></i>
                                 </div>
-                                <div class="ps-3">
-                                    <span class="text-capitalize fw-bold">{{ $event->title }}</span>
+                                <div class="ms-2">
+                                    <span class="text-capitalize small fw-bold">{{ $event->title }}</span>
                                 </div>
                             </div>
                         @empty
@@ -237,10 +237,10 @@
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Last 7 days',
+                    label: 'Tasks Completed',
                     data: data,
                     fill: true,
-                    borderColor: 'rgb(75, 192, 192)',
+                    borderColor: '#16e96e',
                     tension: 0.1
                 }]
             }

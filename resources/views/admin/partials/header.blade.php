@@ -43,7 +43,7 @@
                     </li>
 
                     <li>
-                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">
+                        <a href="{{ route('admin.edit_profile') }}" class="dropdown-item d-flex align-items-center">
                             <i class="bi bi-gear"></i>
                             <span>Account Settings</span>
                         </a>
@@ -53,9 +53,9 @@
                     </li>
 
                     <li>
-                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">
-                            <i class="bi bi-question-circle"></i>
-                            <span>Need Help?</span>
+                        <a href="{{ route('admin.change_password') }}" class="dropdown-item d-flex align-items-center">
+                            <i class="bi bi-shield-lock"></i>
+                            <span>Change Password</span>
                         </a>
                     </li>
                     <li>

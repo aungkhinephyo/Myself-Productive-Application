@@ -43,7 +43,6 @@ class UserPageController extends Controller
         $projectCount = Project::where('user_id', $id)->count();
 
         #For chart
-        $start = Carbon::now()->subWeek()->toDateTimeString();
         $start = now()->startOfMonth()->subDay()->format('Y-m-d');
         $data = Todolist::where('user_id', $id)
             ->where('date', '>', $start)
