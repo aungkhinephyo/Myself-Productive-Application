@@ -32,14 +32,6 @@ class TodolistController extends Controller
             ->whereBetween('date', [$start, $end])
             ->get()
             ->groupBy('date');
-
-        // $dates = [];
-        // $todolists = [];
-        // foreach ($data as $date => $todolist) {
-        //     $dates[] = $date;
-        //     $todolists[] = $todolist;
-        // }
-        // return $todolists;
         return view('user.todolist.todolist_history', compact('todolists'));
     }
 

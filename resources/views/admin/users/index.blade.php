@@ -2,8 +2,9 @@
 @section('title', 'Users')
 @section('content')
     @can('create user')
-        <div class="d-flex justify-content-start py-4">
+        <div class="d-flex justify-content-between py-4">
             <a href="{{ route('user.create') }}" class="btn-theme"><i class="bi bi-plus-circle me-1"></i> Create New User</a>
+            <a href="{{ route('user_list.trash') }}" class="btn-theme"><i class="bi bi-trash me-1"></i> Recycle Bin</a>
         </div>
     @endcan
     <div class="card">

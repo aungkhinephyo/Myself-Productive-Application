@@ -82,7 +82,13 @@ class UserController extends Controller
     public function create()
     {
         $this->checkPermission('create user');
-        $roles = Role::all();
+
+        if (auth()->user()->hasRole(['super admin'])) {
+            $roles = Role::all();
+        } else {
+            $roles = Role::where('name', 'user')->get();
+        }
+
         return view('admin.users.create', compact('roles'));
     }
 
@@ -167,14 +173,14 @@ class UserController extends Controller
 
     public function trash()
     {
-        $this->checkPermission('restore user');
+        $this->checkPermission('delete user');
 
         return view('admin.users.trash');
     }
 
     public function trashData()
     {
-        $this->checkPermission('restore user');
+        $this->checkPermission('delete user');
 
         $users = User::onlyTrashed()->orderBy('deleted_at', 'desc')->get();
         return view('admin.components.trash_table', compact('users'))->render();

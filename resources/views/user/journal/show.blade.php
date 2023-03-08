@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <p class="mb-0 text-center title-cross fw-bold">
-                                <span>{{ Carbon\Carbon::parse($journal->updated_at)->format('F d / Y') }}</span>
+                                <span>{{ Carbon\Carbon::parse($journal->date)->format('F d / Y') }}</span>
                             </p>
                         </div>
                         <div class="preservelines pt-4">{!! \Stevebauman\Purify\Facades\Purify::clean($journal->content) !!}</div>

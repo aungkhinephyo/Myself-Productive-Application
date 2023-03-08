@@ -28,7 +28,9 @@
                 <div class="form-group mb-3">
                     <label for="">Profile Image</label>
                     <input type="file" name="profile_img" class="form-control img-input" />
-                    <div class="preview-img"></div>
+                    <div class="preview-img">
+                        <img src="{{ $user->profile_img() }}" alt="">
+                    </div>
                 </div>
                 <div class="text-center mb-4">
                     <button type="submit" class="btn-theme w-50">Confirm</button>
